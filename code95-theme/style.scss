@@ -1,0 +1,240 @@
+/* Base Styles */
+body {
+    background-color: #f8f9fa;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto 10px auto;
+}
+
+/* Features Section */
+.features {
+    padding-bottom: 30px;
+}
+
+/* Navbar */
+.navbar {
+    font-size: 1rem;
+
+    .nav-link {
+        color: #ffffff;
+
+        &:hover {
+            color: #ccc;
+        }
+    }
+}
+
+/* Search form */
+.search-form {
+    position: relative;
+
+    .form-control {
+        padding-right: 40px;
+        width: 100%;
+    }
+
+    .search-btn {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: transparent;
+        border: none;
+        color: #DF001E;
+
+        i {
+            font-size: 1.2em;
+        }
+    }
+}
+
+/* Card Styles */
+.main-news-card,
+.card {
+    position: relative;
+
+    .card-img-top1 {
+        height: 385px;
+        width: 100%;
+    }
+
+    .card-body {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: #fff;
+        padding: 1rem;
+
+        .badge {
+            font-size: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 15.74px;
+            font-weight: 700;
+            margin: 0;
+        }
+
+        .card-text {
+            font-size: 13.99px;
+            margin-top: 0.5rem;
+            text-align: left;
+            font-weight: 700;
+        }
+    }
+}
+
+/* Section Heading */
+.section-heading {
+    color: #DF001E;
+    border-top: 5px solid #241F20;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+/* Carousel */
+.carousel-item {
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .col-md-3 {
+        flex: 0 0 25%;
+        max-width: 25%;
+        padding: 0 5px;
+
+        @media (max-width: 768px) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        @media (max-width: 576px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+        }
+    }
+
+    .card {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .carousel-caption {
+        background: rgba(0, 0, 0, 0.6);
+        padding: 0.5rem;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
+        font-weight: 700;
+    }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: transparent;
+    width: auto;
+
+    &-icon {
+        background-color: #DF001E;
+        border-radius: 50%;
+    }
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+/* List Styles */
+.list-group-item {
+    font-weight: bold;
+    padding: 0.75rem;
+    font-size: 1rem;
+
+    .number {
+        background-color: #DF001E;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        margin-right: 10px;
+        font-weight: bold;
+        display: inline-block;
+        min-width: 24px;
+        text-align: center;
+    }
+}
+
+/* Additional Styles for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        .navbar-nav {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-link {
+            padding: 10px 15px; /* Adding padding for better touch targets */
+        }
+    }
+
+    .carousel-item {
+        .col-md-3 {
+            flex: 0 0 50%; /* Two columns on medium screens */
+            max-width: 50%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .row {
+        .col-md-6,
+        .col-md-3,
+        .col-md-4,
+        .col-md-5,
+        .col-md-8 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item {
+        .col-md-3 {
+            flex: 0 0 100%; /* One column on small screens */
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+
+    .section-heading {
+        font-size: 1.2rem; /* Smaller font size for smaller screens */
+    }
+
+    .main-news-card,
+    .card {
+        .card-img-top1 {
+            height: 200px;
+        }
+    }
+}

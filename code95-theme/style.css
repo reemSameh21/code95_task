@@ -1,0 +1,293 @@
+/*
+Theme Name: Code95 Task
+Author: Reem Sameh
+Description: A custom WordPress theme for news.
+Version: 1.0
+*/
+
+/* Base Styles */
+body {
+    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.features {
+	margin-bottom: 30px;
+}
+
+.img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 30px auto 10px auto;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #ffffff;
+    margin-right: 15px;
+}
+
+.navbar .navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+/* Dropdown Menu Styles */
+.navbar .dropdown-menu {
+    background-color: #241F20;
+    border: none;
+    padding: 10px 0;
+}
+
+.navbar .dropdown-item {
+    color: #ffffff;
+    padding: 20px 20px;
+}
+
+.navbar .dropdown-item:hover {
+    color: #ccc;
+    background-color: transparent;
+}
+
+/* Mobile Dropdown Styles */
+@media (max-width: 768px) {
+    .navbar .navbar-nav {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .dropdown-menu {
+        position: static;
+        float: none;
+        width: 100%;
+        background-color: #241F20;
+        padding-left: 0;
+    }
+
+    .navbar .dropdown-menu.show {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Search Form */
+.search-form {
+    position: relative;
+}
+
+.search-form .form-control {
+    padding-right: 40px;
+    width: 100%;
+}
+
+.search-form .search-btn {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: #DF001E;
+}
+
+.search-form .search-btn i {
+    font-size: 1.2em;
+}
+
+/* Card Styles */
+.main-news-card,
+.card {
+    position: relative;
+}
+
+.main-news-card .card-img-top1,
+.card .card-img-top1 {
+    height: 385px;
+    width: 100%;
+}
+
+.main-news-card .card-body,
+.card .card-body {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    padding: 1rem;
+}
+
+.main-news-card .card-body .badge,
+.card .card-body .badge {
+    font-size: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-news-card .card-body .card-title,
+.card .card-body .card-title {
+    font-size: 15.74px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.main-news-card .card-body .card-text,
+.card .card-body .card-text {
+    font-size: 13.99px;
+    margin-top: 0.5rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+/* Section Heading */
+.section-heading {
+    color: #DF001E;
+    border-top: 5px solid #241F20;
+    padding-top: 1rem;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    font-weight: 700;
+}
+
+/* Carousel */
+.carousel-item .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.carousel-item .col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 5px;
+}
+
+@media (max-width: 768px) {
+    .carousel-item .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+.carousel-item .card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.carousel-item .card-body {
+    padding: 1rem;
+}
+
+.carousel-item .carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 0.5rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: transparent;
+    width: auto;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #DF001E;
+    border-radius: 50%;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+/* List Styles */
+.list-group-item {
+    font-weight: bold;
+    padding: 0.75rem;
+    font-size: 1rem;
+}
+
+.list-group-item .number {
+    background-color: #DF001E;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-weight: bold;
+    display: inline-block;
+    min-width: 24px;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .navbar .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .nav-link {
+        padding: 10px 15px;
+    }
+
+    .carousel-item .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 10px;
+    }
+
+    .row .col-md-6,
+    .row .col-md-3,
+    .row .col-md-4,
+    .row .col-md-5,
+    .row .col-md-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-item .col-md-3 {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .section-heading {
+        font-size: 1.2rem;
+    }
+
+    .main-news-card .card-img-top1,
+    .card .card-img-top1 {
+        height: 200px;
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
